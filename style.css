@@ -1,0 +1,128 @@
+/* Reset básico para tirar espaçamentos padrão */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centraliza e dá background neutro */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container principal da calculadora */
+.calculator {
+    background-color: #1e1e2f;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Título */
+.calculator h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* Tela da calculadora */
+.display {
+    background-color: #2c2c44;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 2.2rem;
+    text-align: right;
+    margin-bottom: 20px;
+    min-height: 50px;
+    overflow-x: auto;
+}
+
+/* Container dos botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Estilo comum dos botões */
+.btn {
+    padding: 18px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    user-select: none;
+}
+
+/* Botões números */
+.btn.number {
+    background-color: #44475a;
+}
+
+.btn.number:hover {
+    background-color: #5c5f7a;
+}
+
+/* Botão zero ocupa 2 colunas */
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* Botões operadores */
+.btn.operator {
+    background-color: #ff79c6;
+    font-weight: 700;
+}
+
+.btn.operator:hover {
+    background-color: #ff57b8;
+}
+
+/* Botão igual */
+.btn.equal {
+    background-color: #50fa7b;
+    font-weight: 700;
+    grid-row: span 2;
+}
+
+.btn.equal:hover {
+    background-color: #3cd863;
+}
+
+/* Botões limpar e apagar */
+.btn.clear {
+    background-color: #ff5555;
+    font-weight: 700;
+}
+
+.btn.clear:hover {
+    background-color: #ff2222;
+}
+
+.btn.delete {
+    background-color: #f1fa8c;
+    color: #000;
+}
+
+.btn.delete:hover {
+    background-color: #d9e76f;
+}
+
+/* Responsividade básica */
+@media (max-width: 360px) {
+    .calculator {
+        width: 90vw;
+    }
+}
+
+
